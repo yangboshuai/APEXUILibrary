@@ -6,41 +6,12 @@ class _loginElement(object):
     password_inputText=(By.ID,'password')
     submit_inputText=(By.ID,'login_submit')
 
-class  _menuElement(object):
-    '''
-
-    '''
-    user_menuText=(By.ID,'5c831ee5-cb54-4119-8181-f72ca60ee8b7')
-    dep_menuText=(By.ID,'15af6e07-33c1-48b2-8cc2-b52be0482d99')
-    workflow_menuText=(By.ID,'1d70f44f-1147-445c-81f1-0390f7c4039b')
-    organ_menuText=(By.ID,'609831c5-db04-4700-a614-7dab30d9a7c4')
-    system_menuText=(By.ID,'6b727058-bf0e-4250-b2e5-cfca6eb40400')
-
-class _submenuElemnet(object):
-    '''
-
-    '''
-    role_menuText=(By.ID,'83ab8f47-99b0-4277-9ebe-d6303e4f9d5d')
-    group_menuText=(By.ID,'41cd4770-eaf9-4130-98b6-3d517f80eda6')
-    rank_menuText=(By.ID,'fc235670-7ed1-48f6-be64-1346785627e2')
-    position_menuText=(By.ID,'08bfb1d7-9fba-4f58-8b1a-924024e27f46')
-    process_menuText=(By.ID,'6d000443-93c7-424f-b5ea-3aa6d48c0b16')
-    todo_menuText=(By.ID,'d52c250e-2dc0-4cec-898e-8aba1ead795d')
-    complete_menuText=(By.ID,'955317c5-9cfc-44ea-b9b6-c8be337bc1d3')
-    manage_menuText=(By.ID,'ea30ab19-9b17-4a09-920f-894c7e4bcf18')
-    rule_menuText=(By.ID,'6fad93f5-76d1-422b-bb98-a40d51d9cfb4')
-    entrust_menuText=(By.ID,'2585fc36-fd1b-4dde-b91e-d3b8201a967e')
-    cc_menuText=(By.ID,'22fd0f3a-3417-4b5a-89b3-4e41f5c56a60')
-    calendar_menuText=(By.ID,'0b6c269d-45c8-4142-8d5e-92758de2f7ce')
-    task_menuText=(By.ID,'01c567e1-ba29-4386-bf4d-7e7940703acb')
-
-
 class _createUserElement(object):
     '''
 
     '''
     search_inputText = (By.ID, 'q_simpleSearch')
-    search_button = (By.CLASS_NAME, 'btnSimpleSearch')
+    search_button = (By.ID, 'btnSimpleSearch')
     new_button=(By.ID,'btnAddNew')
     dele_checkButton=(By.ID, 'btnDel')
     enabled_button=(By.ID,'btnEnable')
@@ -59,12 +30,16 @@ class _createUserElement(object):
     save_button=(By.ID,'btnSave')
     snew_button=(By.ID,'btnCopySave')
     export_button=(By.ID,'btnExport')
+    edit_button=(By.XPATH,'html/body/div[2]/div[1]/div[1]/table/tbody/tr[1]/td[9]/a')
+    user_checkbox=(By.XPATH,'html/body/div[2]/div[1]/div[1]/table/tbody/tr[1]/td[1]/input')
+    groupedit_button=(By.XPATH,'html/body/div[2]/div[1]/div[1]/table/tbody/tr[3]/td[7]/a')
+
 class _linkDepElement(object):
     '''
 
     '''
     link_button=(By.XPATH,'html/body/div[2]/div[1]/div[1]/table/tbody/tr[8]/td[8]/a[2]/i')
-    edit_button=(By.XPATH,'html/body/div[2]/div[1]/div[1]/table/tbody/tr[8]/td[8]/a[1]/i')
+    edit_button=(By.XPATH,'html/body/div[2]/div[1]/div[1]/table/tbody/tr[10]/td[8]/a[1]/i')
     search_button=(By.XPATH,'html/body/div[2]/div[1]/div[1]/table/tbody/tr[8]/td[8]/a[3]/i')
     top_button=(By.XPATH,'html/body/div[2]/div[1]/div[1]/table/tfoot/tr/td/div[1]/ul/li[1]/a')
     froward_button=(By.XPATH,'html/body/div[2]/div[1]/div[1]/table/tfoot/tr/td/div[1]/ul/li[2]/a')
@@ -91,6 +66,13 @@ class _createDep(object):
     groupname_inputText=(By.ID,'entity_groupName')
     rankname_inputText=(By.ID,'entity_rankName')
     positionname_inputText=(By.ID,'entity_positionName')
+    roles_checkbox=(By.XPATH,'html/body/div[2]/div[1]/div[1]/table/tbody/tr[10]/td[1]/input')
+    reason_textarea=(By.XPATH,'//div[@class="modal-body"]/button[@style="float:left"]/textarea')
+    group_checkbox=(By.XPATH,'html/body/div[2]/div[1]/div[1]/table/tbody/tr[3]/td[1]/input')
+    rank_editbutton=(By.XPATH,'html/body/div[2]/div[1]/div[1]/table/tbody/tr[2]/td[8]/a[1]')
+    rank_checkbox=(By.XPATH,'html/body/div[2]/div[1]/div[1]/table/tbody/tr[2]/td[1]/input')
+    position_editbutton=(By.XPATH,'html/body/div[2]/div[1]/div[1]/table/tbody/tr[1]/td[8]/a')
+    position_delebutton=(By.XPATH,'html/body/div[2]/div[1]/div[1]/table/tbody/tr/td[8]/a[3]/i')
 
 class _createWork(object):
     '''
@@ -105,6 +87,8 @@ class _craeteOrg(object):
     orgname_inputText=(By.ID,'entity_organizationName')
     office_inputText=(By.ID,'entity_officeNo')
     emmail_inputText=(By.ID,'entity_email')
+    edit_button=(By.XPATH,'html/body/div[2]/div[1]/div[1]/table/tbody/tr[2]/td[6]/a')
+    org_checkbox=(By.XPATH,'html/body/div[2]/div[1]/div[1]/table/tbody/tr[2]/td[1]/input')
 
 class _createCal(object):
     '''
@@ -139,3 +123,17 @@ class _createTask(object):
 
     '''
     new_button=(By.ID,'btnAddNew')
+    complte_button=(By.ID,'btnCom')
+    delete_button=(By.ID,'btnDel')
+    content_textarea=(By.ID,'entity_taskContent')
+
+class _createTemplate(object):
+    '''
+
+    '''
+    templateCode_inputText=(By.ID,'entity_tplCode')
+    templateName_inputText=(By.ID,'entity_tplName')
+    textField_redioText=(By.ID,'entity_tplType0')
+    content_textarea=(By.ID,'entity_tplContent0')
+    textEditor_redioText=(By.ID,'entity_tplType1')
+    editor_viewText=(By.XPATH,'/html/body')

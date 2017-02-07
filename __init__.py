@@ -1,6 +1,4 @@
 
-from _global import _GlobalKeywords
-from _user import _USERKeywords
 
-class APEXUILibrary(_GlobalKeywords,_USERKeywords):
+class APEXUILibrary():
     ROBOT_LIBRARY_SCOPE = 'GLOBAL'
