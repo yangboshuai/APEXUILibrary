@@ -1,11 +1,11 @@
-from position import _POSITIONKeywords
+from _roles import _RolesKeysword
 from _global import _GlobalKeywords
 
 glo=_GlobalKeywords()
-pos=_POSITIONKeywords()
+r=_RolesKeysword()
 glo.openBrowser()
-glo.login('admin','1234a*')
-pos.enterPosit()
-pos._delPosit()
+glo.login('sysadmin','123456a*')
+r.enterRoles()
+r.delRoles_BySysadmin()
 glo.logout()
 

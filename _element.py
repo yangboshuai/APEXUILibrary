@@ -13,6 +13,7 @@ class _createUserElement(object):
     search_inputText = (By.ID, 'q_simpleSearch')
     search_button = (By.ID, 'btnSimpleSearch')
     new_button=(By.ID,'btnAddNew')
+    new_button_Sysadmin=(By.ID,'btnStart')
     dele_checkButton=(By.ID, 'btnDel')
     enabled_button=(By.ID,'btnEnable')
     disabled_button=(By.ID,'btnDisable')
@@ -33,13 +34,14 @@ class _createUserElement(object):
     edit_button=(By.XPATH,'html/body/div[2]/div[1]/div[1]/table/tbody/tr[1]/td[9]/a')
     user_checkbox=(By.XPATH,'html/body/div[2]/div[1]/div[1]/table/tbody/tr[1]/td[1]/input')
     groupedit_button=(By.XPATH,'html/body/div[2]/div[1]/div[1]/table/tbody/tr[3]/td[7]/a')
+    userEdit_button_bySysadmin=(By.XPATH,'html/body/div[2]/div[1]/div[1]/table/tbody/tr[1]/td[9]/a')
 
 class _linkDepElement(object):
     '''
 
     '''
     link_button=(By.XPATH,'html/body/div[2]/div[1]/div[1]/table/tbody/tr[8]/td[8]/a[2]/i')
-    edit_button=(By.XPATH,'html/body/div[2]/div[1]/div[1]/table/tbody/tr[10]/td[8]/a[1]/i')
+    edit_button=(By.XPATH,'html/body/div[2]/div[1]/div[1]/table/tbody/tr[9]/td[8]/a[1]/i')
     search_button=(By.XPATH,'html/body/div[2]/div[1]/div[1]/table/tbody/tr[8]/td[8]/a[3]/i')
     top_button=(By.XPATH,'html/body/div[2]/div[1]/div[1]/table/tfoot/tr/td/div[1]/ul/li[1]/a')
     froward_button=(By.XPATH,'html/body/div[2]/div[1]/div[1]/table/tfoot/tr/td/div[1]/ul/li[2]/a')
@@ -63,17 +65,26 @@ class _createDep(object):
     '''
     '''
     rolename_inputText=(By.ID,'entity_roleName')
+    role_status=(By.ID,'entity_roleStatus')
+    role_description=(By.ID,'entity_description')
     groupname_inputText=(By.ID,'entity_groupName')
+    group_status=(By.ID,'entity_groupStatus')
+    group_description=(By.ID,'entity_description')
     rankname_inputText=(By.ID,'entity_rankName')
+    rank_status=(By.ID,'entity_rankStatus')
+    rank_description=(By.ID,'entity_description')
     positionname_inputText=(By.ID,'entity_positionName')
-    roles_checkbox=(By.XPATH,'html/body/div[2]/div[1]/div[1]/table/tbody/tr[10]/td[1]/input')
-    reason_textarea=(By.XPATH,'//div[@class="modal-body"]/button[@style="float:left"]/textarea')
+    position_status=(By.ID,'entity_positionStatus')
+    position_description=(By.ID,'entity_description')
+    roles_checkbox=(By.XPATH,'html/body/div[2]/div[1]/div[1]/table/tbody/tr[9]/td[1]/input')
+    reason_textarea=(By.XPATH,'html/body/div[4]/div[2]/div[1]/textarea')
+    reason_yesbutton=(By.XPATH,'html/body/div[4]/div[3]/button[1]')
     group_checkbox=(By.XPATH,'html/body/div[2]/div[1]/div[1]/table/tbody/tr[3]/td[1]/input')
     rank_editbutton=(By.XPATH,'html/body/div[2]/div[1]/div[1]/table/tbody/tr[2]/td[8]/a[1]')
     rank_checkbox=(By.XPATH,'html/body/div[2]/div[1]/div[1]/table/tbody/tr[2]/td[1]/input')
     position_editbutton=(By.XPATH,'html/body/div[2]/div[1]/div[1]/table/tbody/tr[1]/td[8]/a')
-    position_delebutton=(By.XPATH,'html/body/div[2]/div[1]/div[1]/table/tbody/tr/td[8]/a[3]/i')
-
+    position_delebutton=(By.XPATH,'html/body/div[2]/div[1]/div[1]/table/tbody/tr[2]/td[8]/a[3]/i')
+    submit_button=(By.ID,'btnSubmit')
 class _createWork(object):
     '''
     '''
@@ -89,7 +100,8 @@ class _craeteOrg(object):
     emmail_inputText=(By.ID,'entity_email')
     edit_button=(By.XPATH,'html/body/div[2]/div[1]/div[1]/table/tbody/tr[2]/td[6]/a')
     org_checkbox=(By.XPATH,'html/body/div[2]/div[1]/div[1]/table/tbody/tr[2]/td[1]/input')
-
+    orgEdit_button_bySysadmin=(By.XPATH,'html/body/div[2]/div[1]/div[1]/table/tbody/tr[6]/td[6]/a[1]/i')
+    orgDel_check_bySysadmin=(By.XPATH,'html/body/div[2]/div[1]/div[1]/table/tbody/tr[6]/td[1]/input')
 class _createCal(object):
     '''
 

@@ -1,5 +1,5 @@
 from _global import _GlobalKeywords
-from orgization import _ORGKeyswords
+from _orgization import _ORGKeyswords
 
 
 glo=_GlobalKeywords()
